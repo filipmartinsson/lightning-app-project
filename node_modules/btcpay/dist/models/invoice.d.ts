@@ -1,0 +1,73 @@
+export interface Invoice {
+    url: string;
+    posData: string | null;
+    status: string;
+    btcPrice: string;
+    btcDue: string;
+    cryptoInfo: Array<{
+        cryptoCode: string;
+        paymentType: string;
+        rate: number;
+        exRates: any[];
+        paid: string;
+        price: string;
+        due: string;
+        paymentUrls: any[];
+        address: string;
+        url: string;
+        totalDue: string;
+        networkFee: string;
+        txCount: number;
+        cryptoPaid: string;
+        payments: any[];
+    }>;
+    price: number;
+    currency: string;
+    exRates: any;
+    buyerTotalBtcAmount: string | null;
+    itemDesc: string | null;
+    itemCode: string | null;
+    orderId: string | null;
+    guid: string;
+    id: string;
+    invoiceTime: number;
+    expirationTime: number;
+    currentTime: number;
+    lowFeeDetected: boolean;
+    btcPaid: string;
+    rate: number;
+    exceptionStatus: boolean;
+    paymentUrls: {
+        BIP21: string | null;
+        BIP72: string | null;
+        BIP72b: string | null;
+        BIP73: string | null;
+        BOLT11: string | null;
+    };
+    refundAddressRequestPending: boolean;
+    buyerPaidBtcMinerFee: string | null;
+    bitcoinAddress: string;
+    token: string;
+    flags: {
+        refundable: boolean;
+    };
+    paymentSubtotals: any;
+    paymentTotals: any;
+    amountPaid: number;
+    minerFees: any;
+    exchangeRates: any;
+    supportedTransactionCurrencies: any;
+    addresses: any;
+    paymentCodes: any;
+    buyer: {
+        name: string | null;
+        address1: string | null;
+        address2: string | null;
+        locality: string | null;
+        region: string | null;
+        postalCode: string | null;
+        country: string | null;
+        phone: string | null;
+        email: string | null;
+    };
+}
